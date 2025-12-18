@@ -1,0 +1,361 @@
+
+/* RESET ET STYLES GÉNÉRAUX */
+/* Réinitialisation des marges et padding par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles pour le corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Conteneur principal pour centrer le contenu */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* EN-TÊTE */
+/* Style de l'en-tête avec fond coloré */
+header {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+    color: white;
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style pour le titre principal */
+.header-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour le sous-titre */
+.header-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Style pour le texte d'introduction */
+.intro-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* SECTION PRINCIPALE */
+/* Style de la section principale */
+.main-section {
+    padding: 80px 0;
+}
+
+/* Style pour les titres de section */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    position: relative;
+}
+
+/* Ligne décorative sous les titres de section */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* CONTENU À DEUX COLONNES */
+/* Disposition flex pour les colonnes */
+.two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour chaque colonne */
+.column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+/* Style des cartes d'information */
+.info-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol des cartes */
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Style des images */
+.profile-img, .location-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des titres dans les cartes */
+.info-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style pour le texte des cartes */
+.card-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Style des citations */
+blockquote {
+    font-style: italic;
+    padding: 20px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Auteur des citations */
+.quote-author {
+    text-align: right;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-top: 10px;
+}
+
+/* Liste des technologies */
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Style des badges de technologie */
+.tech-badge {
+    background: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* SECTION DES CITATIONS */
+/* Style de la section des citations */
+.quotes-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 80px 0;
+}
+
+/* Conteneur des citations */
+.quotes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Style des cartes de citation */
+.quote-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol des cartes de citation */
+.quote-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Style des icônes dans les cartes de citation */
+.quote-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+/* PIED DE PAGE */
+/* Style du pied de page */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Style pour le contenu du pied de page */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Style pour les informations de contact */
+.contact-info {
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Style pour les liens sociaux */
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style des icônes sociales */
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet au survol des icônes sociales */
+.social-icon:hover {
+    color: #3498db;
+    transform: translateY(-3px);
+}
+
+/* Style du copyright */
+.copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE DESIGN */
+/* Adaptation pour les tablettes */
+@media (max-width: 992px) {
+    .header-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .header-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .two-columns {
+        gap: 30px;
+    }
+}
+
+/* Adaptation pour les téléphones */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 0 40px;
+    }
+    
+    .header-content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .header-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+    }
+    
+    .main-section, .quotes-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 1.9rem;
+    }
+    
+    .column {
+        min-width: 100%;
+    }
+    
+    .info-card, .quote-card {
+        padding: 25px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+}
+
+/* Adaptation pour les petits téléphones */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.9rem;
+    }
+    
+    .header-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .info-card h3 {
+        font-size: 1.5rem;
+    }
+}
